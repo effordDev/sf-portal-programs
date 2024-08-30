@@ -154,6 +154,7 @@ private class PortalProgramsHelperTest {
         User testUser = [SELECT Id, AccountId FROM User WHERE Alias = 'testuser' LIMIT 1];
 
         System.runAs(new User(Id = UserInfo.getUserId())) {
+            
             PermissionSet ps = [
                 SELECT Id 
                 FROM PermissionSet 
