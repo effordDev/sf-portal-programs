@@ -1,0 +1,15 @@
+.card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    min-height: 15vh;
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    font-size: larger;
+    font-weight: 800;
+}

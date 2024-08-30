@@ -1,0 +1,48 @@
+<template>
+
+    <template lwc:if={init}>
+        Loading...
+        <template lwc:if={isLoading}>
+            <lightning-spinner 
+                alternative-text="Loading"
+            ></lightning-spinner>
+        </template>
+    </template>
+
+    <template lwc:elseif={error}>
+        An error has occured.
+    </template>
+
+    <template lwc:else>
+
+        <template lwc:if={isLoading}>
+            <lightning-spinner 
+                alternative-text="Loading"  
+            ></lightning-spinner>
+        </template>
+
+        <div class="card">
+            <div class="header">
+                {name} 
+            </div>
+    
+            <div class="slds-text-body_regular">
+                {purpose}
+            </div>
+    
+            <br />
+    
+            <div class="slds-text-body_small">
+                {description}
+            </div>
+    
+            <br />
+    
+            <lightning-button
+                label={btnLabel}
+                onclick={handleBtnClick}
+                variant={btnVariant}
+            ></lightning-button>
+        </div>
+    </template>
+</template>

@@ -1,0 +1,22 @@
+<template>
+
+    <template lwc:if={error}>
+        An error has occured.
+    </template> 
+
+    <template lwc:else>
+        
+        <template lwc:if={isLoading}>
+            <lightning-spinner alternative-text="Loading"></lightning-spinner>
+        </template>
+
+        <template lwc:if={applications.length} for:each={applications} for:item="application">
+            <c-portal-program-application
+                key={application.Id}
+                application={application}
+                account-contact-relations={accountContactRelations}
+            ></c-portal-program-application>
+        </template>
+        
+    </template>
+</template>

@@ -1,0 +1,94 @@
+<template>
+    <template lwc:if={isLoading}>
+        <lightning-spinner 
+            alternative-text="Loading"  
+        ></lightning-spinner>
+    </template>
+
+    <div class="card">
+        <div class="header">
+            {displayName} 
+        </div>
+
+        <div class="slds-text-body_small">
+            <lightning-formatted-rich-text
+                value={description}
+            ></lightning-formatted-rich-text>
+        </div>
+
+        <br />
+
+        <template lwc:if={openDate}>
+            <div class="slds-text-body_regular">
+                Application Open Date: <b>
+                    <lightning-formatted-date-time 
+                        value={openDate}
+                    ></lightning-formatted-date-time>
+                </b>
+            </div>
+        </template>
+
+        <template lwc:if={endDate}>
+            <div class="slds-text-body_regular">
+                Application End Date: <b>
+                    <lightning-formatted-date-time 
+                        value={endDate}
+                    ></lightning-formatted-date-time>
+                </b>
+            </div>
+        </template>
+        
+        <template lwc:if={showApplyNowBtn}>
+            
+            <br />
+            
+            <lightning-button
+                label="Apply Now"
+                onclick={handleApplyNowClick}
+                variant="brand"
+            ></lightning-button>
+        </template>
+    </div>
+
+    <template lwc:if={showAccountContactRelations}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+              
+              <div class="slds-modal__header">
+                    <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate" tabindex="-1">
+                        Select the account this application is related to. 
+                    </h1>
+              </div>
+
+              <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                
+                <lightning-datatable
+                    key-field="Id"
+                    data={accountContactRelations}
+                    columns={cols}
+                    max-row-selection="1"
+                    onrowselection={handleRowSelection}
+                ></lightning-datatable>
+
+              </div>
+              <div class="slds-modal__footer">
+                    <lightning-button
+                        label="Cancel"
+                        onclick={handleCancel}
+                    ></lightning-button>
+                    &nbsp;
+                    <lightning-button
+                        lwc:if={selectedAccountId}
+                        label={createApplicationBtnLabel}
+                        variant="brand"
+                        onclick={handleSubmit}
+                    ></lightning-button>
+              </div>
+
+            </div>
+          </section>
+          <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+
+
+</template>
