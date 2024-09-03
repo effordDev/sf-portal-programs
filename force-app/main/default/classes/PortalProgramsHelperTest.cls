@@ -66,7 +66,7 @@ private class PortalProgramsHelperTest {
             c.AccountId = account.Id;
             insert c;
 
-            Profile p = [SELECT Id FROM Profile WHERE Name = 'Customer Community Plus'];
+            Profile p = [SELECT Id FROM Profile WHERE Name = 'Customer Community Plus Login User'];
     
             testUser.Alias = 'testuser';
             testUser.Email = String.valueOf(System.now().getTime()) + 'testuser@example.com';

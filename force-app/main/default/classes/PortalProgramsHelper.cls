@@ -126,7 +126,7 @@ public with sharing class PortalProgramsHelper {
                 Program__c
                 FROM Reference_Application__c
                 WHERE Id =: recordId
-                WITH SECURITY_ENFORCED
+                // WITH SECURITY_ENFORCED
             ];
 
             Application__c application = new Application__c();
@@ -139,6 +139,7 @@ public with sharing class PortalProgramsHelper {
 
             return application;
         } catch (Exception e) {
+            system.debug(e.getMessage());
             throw new AuraHandledException(e.getMessage());
         }
     }
