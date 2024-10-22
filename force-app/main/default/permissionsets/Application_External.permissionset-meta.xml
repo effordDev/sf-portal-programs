@@ -501,11 +501,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Project_Area_Location__c.Location__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>Reference_Application_Detail_Language__c.Translated_Text__c</field>
         <readable>true</readable>
