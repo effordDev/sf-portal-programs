@@ -1,5 +1,10 @@
 # Prerequisites 
 
+<a href="https://githubsfdeploy.herokuapp.com">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
+
 [Application Module](https://github.com/effordDev/sf-application)
 
 Contacts to Multiple Accounts Settings: `true`
