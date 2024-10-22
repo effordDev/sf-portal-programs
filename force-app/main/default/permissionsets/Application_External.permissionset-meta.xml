@@ -697,11 +697,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Reference_Application_Detail__c.Question_Number__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Reference_Application_Detail__c.Radio_Group_Values__c</field>
         <readable>true</readable>
     </fieldPermissions>
