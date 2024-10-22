@@ -1,6 +1,6 @@
 # Prerequisites 
 
-<a href="https://githubsfdeploy.herokuapp.com">
+<a href="https://githubsfdeploy.herokuapp.com?owner=effordDev&repo=sf-portal-programs&ref=master">
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
